@@ -241,3 +241,27 @@ app.use(routes);
 
 app.listen(3333);
 ```
+
+---
+
+# Aula 03 - 25/03/2020
+
+## **Desenvolvimento do Front-end**
+
+<br>Limpando estrutura inicial: contém imagem de como ficou a estrutura
+
+**Iniciando aplicação:**
+```
+npm start
+```
+
+**Conceitor do React:**
+<br>React primeiro le todas informações que estão no index.html e depois a partir index.js começa a ler os outros arquivos .js
+
+<br>Componente no React, é uma função que retorna HTML e o componente pode ter outras funcionalidades utilizando js, css... 
+JSX: é quando o arquivo HTML esta escrito dentro de um arquivo JavaScript
+
+<br>Propriedades e Estado
+
+<br>Exemplo: contador de números. Primeiro commit da Aula 03 - front-end
+
