@@ -34,20 +34,13 @@ Vamos utilizar o Query Builder: KNEX.JS(http://knexjs.org/)
 */
 
 const express = require('express');
+const routes = require('./routes');
+const cors = require('cors');
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
-
-app.post('/users', (request, response) => {
-    const body = request.body;
-
-    console.log(body);
-
-    return response.json({
-        "evento": 'semana omnistack',
-        "aluno": 'leonardo may'
-    });
-});
+app.use(routes);
 
 app.listen(3333);

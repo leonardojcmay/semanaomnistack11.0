@@ -111,3 +111,133 @@ Configurando SQLite:
 <br>**Query Builder:** table('users').select('*').where()
 
 Vamos utilizar o ***Query Builder*** : **KNEX.JS (http://knexjs.org/)**
+
+**Intalando Knex:**
+```
+npm install knex
+
+npm install sqlite3
+```
+
+**Conexão com o Bando de dados:**
+```
+npx knex init
+```
+
+Estruturando backend, criando pasta src, arquivo routes.
+
+<br>**Arquivo knexfile.js:**
+```
+module.exports = {
+
+  development: {
+    client: 'sqlite3',
+    connection: {
+      filename: './src/database/db.sqlite'
+    }
+  },
+```
+
+**Entidades:**
+<br>- Ong
+<br>- Caso(incident)
+
+**Funcionalidades:**
+<br>- Login de ONG
+<br>- Logout de ONG
+<br>- Cadastro de ONG
+<br>- Cadastrar novos casos
+<br>- Deletar casos
+<br>- Listar casos Eespecificos de uma ONG
+<br>- Listar todos os casos
+<br>- Entra em contato com a ONG
+
+**Criação das tabelas do banco:**
+<br>http://knexjs.org/#Migrations
+
+**Arquivo knexfile.js:**
+```
+module.exports = {
+
+  development: {
+    client: 'sqlite3',
+    connection: {
+      filename: './src/database/db.sqlite'
+    },
+    migrations: {
+      directory: './src/database/migrations'
+    },
+    useNullAsDefault: true,
+  },
+```
+
+**Exemplo:**
+criando migration create_ongs
+```
+npx knex migrate:make create_ongs 
+```
+
+Após inserir todas as informações da tabela, exemplo create_ongs:
+```
+//Método up: o que você quer que seja feito
+exports.up = function(knex) {
+    //Criação da tabela ONGs
+  return knex.schema.createTable('ongs', function (table) {
+      table.string('id').primary();
+      table.string('name').notNullable();
+      table.string('email').notNullable();
+      table.string('whatsapp').notNullable();
+      table.string('city').notNullable();
+      table.string('uf', 2).notNullable();//Limitando campo com 2 caracteres
+  })
+};
+
+//Método down: caso de algum erro, precisa desfazer o que fez, deletar a tabel
+exports.down = function(knex) {
+    return knex.schema.dropTable('ongs');
+  
+}; 
+```
+
+**Executar comando abaixo para criar a tabela no banco de dados:**
+```
+npx knex migrate:latest
+```
+
+**Comando para desfazer a ultima migration, caso tenha feito errado:**
+```
+npx knex migrate:rollback
+```
+
+**Comando para ver as migrations que foram já criadas:**
+```
+npx knex migrate:status
+```
+
+---
+
+**Criação das rotas, controllers...**
+<br> Código esta todo comentado explicando cada passo
+
+---
+
+**Adicionando o CORS:**
+<br>O cors determina quem poderá acessar a aplicação
+```
+npm install cors
+```
+
+Arquivo index.js:
+```
+const express = require('express');
+const routes = require('./routes');
+const cors = require('cors');
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+app.use(routes);
+
+app.listen(3333);
+```
