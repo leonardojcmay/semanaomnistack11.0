@@ -255,13 +255,69 @@ app.listen(3333);
 npm start
 ```
 
-**Conceitor do React:**
-<br>React primeiro le todas informações que estão no index.html e depois a partir index.js começa a ler os outros arquivos .js
+**Conceitos do React:**
+<br>React primeiro lê todas informações que estão no index.html e depois a partir index.js começa a ler os outros arquivos .js
 
-<br>Componente no React, é uma função que retorna HTML e o componente pode ter outras funcionalidades utilizando js, css... 
+Componente no React, é uma função que retorna HTML e também pode ter outras funcionalidades utilizando js, css... 
+
 JSX: é quando o arquivo HTML esta escrito dentro de um arquivo JavaScript
 
-<br>Propriedades e Estado
+Propriedade e Estado
 
-<br>Exemplo: contador de números. Primeiro commit da Aula 03 - front-end
+---
 
+**Exemplo:** contador de números. Primeiro commit da Aula 03 - front-end.
+
+Criando a primeira página:
+
+Página de login:
+criado index.js, styles.css
+
+Fonte letra utilizada: Roboto
+<br>Icons utilizados: https://feathericons.com/
+
+Integrando pacote de icons com o frontend:
+```
+npm install react-icons
+```
+---
+
+**Configurando rotas da aplicação:**
+
+Instalar parte de rotas da aplicação:
+```
+npm install react-router-dom
+```
+---
+
+**Ordem de criação das páginas:**
+<br>*Login*
+<br>*Register: cadastro de ONGs*
+<br>*Listagem de casos*
+<br>*Cadastro de novos casos*
+
+---
+
+**Conectar o front-end com o back-end:**
+<br>Ir na pasta do backend e iniciar o servidor
+```
+npm start
+```
+
+Conectando React com o Node.js:
+<br>Instalar client http:
+```
+npm install axios
+```
+
+**Arquivo services/api.js**
+<br>Importando pacote de conexão com banco de dados.
+```
+import axios from 'axios';
+
+const api = axios.create({
+    baseURL: 'http://localhost:3333',
+})
+
+export default api;
+```
