@@ -46,6 +46,13 @@ Imagem 03: front-end - Hello World
 
 ---
 
+**Comando para startar aplicação:**
+***Back-end: npm start***
+***Front-end: npm start***
+***Mobile: yarn start***
+
+---
+
 # Aula 02 - 24/03/2020
 
 ## **Desenvolvimento do Back-end**
@@ -321,3 +328,98 @@ const api = axios.create({
 
 export default api;
 ```
+
+---
+
+# Aula 04 - 26/03/2020
+
+## **Desenvolvimento do Mobile**
+
+React Native & Expo
+
+**Instalando Expo:**
+<br>Irá instalar ele globalmente na máquina, assim poderá utilizá-lo em qualquer outro projeto.
+```
+npm install -g expo-cli
+```
+Verificando se foi instalado:
+```
+expo -h
+```
+
+**Criando projeto mobile:**
+```
+expo init mobile
+```
+Template: blank
+
+**Executando software no celular:**
+<br>Iniciando aplicação:
+```
+yarn start
+```
+
+**Acessando expo no celular**
+
+**Site interessante:** é possivel ver o resultado direto na web
+<br>https://snack.expo.io/
+
+**Configurando icone e Splash Screen:**
+<br>Colocado imagens icons e splash dentro da pasta assets.
+<br>Criado pasta pages.
+<br>Definindo as rotas da aplicação.
+
+**Instalando routes/rotas no expo:**
+<br>https://reactnavigation.org/docs/getting-started
+```
+npm install @react-navigation/native
+
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+```
+
+**Configurando as rotas:**
+<br>Esta opção que vamos utilizar nesta aplicação, é utilizada quando se contém mais a navegação por botões.
+<br>https://reactnavigation.org/docs/hello-react-navigation
+
+**Instalando o stack navigation:**
+```
+npm install @react-navigation/stack
+```
+
+**Instalando pacote para que os dados da aplicação não fiquem em cima da status bar:**
+```
+expo install expo-constants
+```
+
+---
+
+Fazendo funções do E-mail e do Whatsapp:
+
+**E-mail:** 
+<br>Instalar pacote:
+```
+expo install expo-mail-composer
+```
+Documentação do mailComposer:
+<br>https://docs.expo.io/versions/latest/sdk/mail-composer/
+
+**Whatsapp:** feito configurações utilizando o função ***Linking***.
+
+---
+
+**Conectando mobile com a API**
+
+**Instalar axios:**
+```
+npm install axios
+```
+
+Criado arquivo services/api.js
+
+**Instalando pacote para formatação em R$:**
+```
+npm install intl
+```
+---
+
+Código esta totalmente comentado, explicando todos os passos e informações que identifiquei importantes.
