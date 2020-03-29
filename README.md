@@ -423,3 +423,147 @@ npm install intl
 ---
 
 Código esta totalmente comentado, explicando todos os passos e informações que identifiquei importantes.
+
+---
+
+# Aula 05 - 27/03/2020
+
+## **Funcionalidades Avançadas:**
+
+**Validação de dados:**
+<br>Instalar biblioteca: celebrate
+<br>Documentação: https://github.com/arb/celebrate
+<br>Celebrate integra o Joi(https://github.com/hapijs/joi) com o Express
+```
+npm install celebrate
+```
+
+---
+
+**Adicionando testes:**
+
+***TDD(Test-driven Development):***
+<br>Segundo esta técnica fazemos os testes antes mesmo de terminar o desenvolvimento das funcionalidades.
+
+Configurando Jest:
+<br>https://jestjs.io/
+```
+npm install jest -D
+
+npx jest --init
+
+Y
+node
+N
+y
+```
+
+**Testes de integração:** tests/integration
+<br>São testes que irão testar o fluxo de uma rota inteira da aplicação.
+
+**Teste unitário:** tests/unit
+<br>Testa um pedaço da aplicação de uma forma muito isolada.
+
+Para executar teste:
+```
+npm test
+```
+
+**Configurando banco de dados para testes:**
+<br>Arquivo knexfile.js: adicionado configurações abaixo:
+```
+test: {
+    client: 'sqlite3',
+    connection: {
+      filename: './src/database/test.sqlite'
+    },
+    migrations: {
+      directory: './src/database/migrations'
+    },
+    useNullAsDefault: true,
+  },
+```
+
+Instalar pacote:
+```
+npm install cross-env
+```
+
+Arquivo package.json:
+```
+"scripts": {
+    "start": "nodemon src/index.js",
+    "test": "cross-env NODE_ENV=test jest"
+  },
+```
+
+Verificar dados de conexão tambem no arquivo connection.js
+
+**Fazendo teste de integração**
+<br>Instalar pacote supertest: auxilia nos logs. Instalando como depencia de desesenvolvimento
+```
+npm install supertest -D
+```
+
+Alterado no do src/index.js para src app.js. Criado arquivo server.js
+
+Arquivo package.json:
+```
+"scripts": {
+    "start": "nodemon src/server.js",
+    "test": "cross-env NODE_ENV=test jest"
+  },
+```
+
+Após isto, fazer a criação dos arquivo de integração e executar o comando:
+```
+npm test
+```
+
+Exemplo para quando precisar do authorization, por exemplo na rota /profile:
+
+```
+//Testando se é possivel a listagem da Profile de uma ONG
+  it('should be able to create a new ONG', async () => {
+    const response = await request(app)
+    .get('/profile')
+    .set('Authorization', 'idValidoOng')
+    .send({
+        name: "APAD2",
+        email: "teste@apad.com",
+        whatsapp: "554700000000",
+        city: "Gravatal",
+        uf: "SC"
+  });
+```
+
+---
+
+**<h1>Deploy:</h1>**
+Indicação de onde hospedar a aplicação:
+
+**Node.js: back-end**
+<br>Aplicações pequenas: Heroku
+<br>https://www.youtube.com/watch?v=-j7vLmBMsEU
+
+Aplicações maiores/comercial: DigitalOcean
+<br>https://www.youtube.com/watch?v=ICIz5dE3Xfg
+
+Aplicações muito maiores:
+<br>*AWS*
+<br>*Google Cloud Platform*
+<br>*Microsoft Razor*
+
+**React: front-end**
+<br>Aplicações pequenas: netlify
+<br>https://www.netlify.com/
+
+**React Native: mobile**
+<br>https://www.youtube.com/watch?v=wYMvzbfBdYI
+
+---
+
+**Recomendações de estudo:**
+<br>Padrões de código: ESLint, Prettier
+<br>Autenticação JWT
+<br>Styled Components

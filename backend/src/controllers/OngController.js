@@ -1,5 +1,5 @@
 //Geração do id
-const crypto = require('crypto');
+const generateUniqueId = require('../utils/generateUniqueId');
 //Conexão com banco de dados
 const connection = require('../database/connection');
 
@@ -20,7 +20,7 @@ module.exports = {
         const { name, email, whatsapp, city, uf } = request.body;
 
         //Criar o id
-        const id = crypto.randomBytes(4).toString('HEX');//Vai gerar 4 bits de catacteres aleatórios, e irá converter estes caracteres em uma String do tipo hexadecimal
+        const id = generateUniqueId();
 
         //Conexão com o banco de dados
         //async / await: somente irá retornar alguma resposta após efetuar a conexão no banco de dados ou qualquer outra operação que esteja no await

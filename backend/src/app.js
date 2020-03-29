@@ -36,11 +36,13 @@ Vamos utilizar o Query Builder: KNEX.JS(http://knexjs.org/)
 const express = require('express');
 const routes = require('./routes');
 const cors = require('cors');
+const { errors } = require('celebrate');//Para tratar os erros de validação
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use(routes);
+app.use(errors());
 
-app.listen(3333);
+module.exports = app;
