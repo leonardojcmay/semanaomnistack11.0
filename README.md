@@ -12,11 +12,13 @@
 ---
 
 ## MOBILE:
-<!--![1-mobile](https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/mobile/1-mobile.jpeg?raw=true "1-mobile")
+<!--![1-mobile](https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/mobile/1-mobile.jpeg?raw=true "1-mobile" width=30%)
 -->
-<img src="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/mobile/1-mobile.jpeg?raw=true" width=45% display: flex justify-content: space-evenly/>
 
-<img src="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/mobile/2-mobile.jpeg?raw=true" width=45% display: flex justify-content: space-evenly/>
+<div>
+  <img src="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/mobile/1-mobile.jpeg?raw=true" width=30%/>
+  <img src="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/mobile/2-mobile.jpeg?raw=true" width=30%/>
+</div>
 
 ---
 
