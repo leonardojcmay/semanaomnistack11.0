@@ -9,17 +9,16 @@
 ![6-web](https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/web/6-web.png?raw=true "6-web")
 ![7-web](https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/web/7-web.png?raw=true "7-web")
 
-## MOBILE:
-![1-mobile](https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/mobile/1-mobile.jpeg?raw=true "1-mobile")
-![2-mobile](https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/mobile/2-mobile.jpeg?raw=true "2-mobile")
+---
 
-<style>
-  img {
-    width:48%;
-    display: inline;
-    margin: 1px;
-  }
-</style>
+## MOBILE:
+<!--![1-mobile](https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/mobile/1-mobile.jpeg?raw=true "1-mobile")
+-->
+<img src="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/mobile/1-mobile.jpeg?raw=true" width=45% display: flex justify-content: space-evenly/>
+
+<img src="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/mobile/2-mobile.jpeg?raw=true" width=45% display: flex justify-content: space-evenly/>
+
+---
 
 # Aula 01 - 23/03/2020
 
