@@ -45,8 +45,8 @@ Criar manualmente o arquivo ***index.js***
 node index.js
 ```
 
-Imagem 01: back-end - Hello World
-<br>Imagem 02: back-end - JSON
+<a href="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/Aula%201%20-%2023-03-2020/01-back-end%20-%20Hello%20World.png?raw=true">**Imagem 01:** back-end - Hello World</a>
+<br><a href="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/Aula%201%20-%2023-03-2020/02-back-end%20-%20JSON.png?raw=true">**Imagem 02:** back-end - JSON</a>
 
 ---
 
@@ -62,7 +62,7 @@ npx create-react-app frontend
 npm start
 ```
 
-Imagem 03: front-end - Hello World
+<a href="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/Aula%201%20-%2023-03-2020/03-front-end%20-%20Hello%20World.png?raw=true">**Imagem 03:** front-end - Hello World</a>
 
 ---
 
@@ -71,9 +71,9 @@ Imagem 03: front-end - Hello World
 ---
 
 **Comando para startar aplicação:**
-***Back-end: npm start***
-***Front-end: npm start***
-***Mobile: yarn start***
+<br>***Back-end:*** *npm start*
+<br>***Front-end:*** *npm start*
+<br>***Mobile:*** *yarn start*
 
 ---
 
@@ -93,20 +93,20 @@ Imagem 03: front-end - Hello World
 <br>**Query Params:** Parametros nomeados enviados na rota após "?", servem para filtros, paginação.
 <br>Exemplo: GET http://localhost:3333/users?page=2&nome=Leonardo&idade=22
 
-Imagem 01 - Query Params Exemplo 1
-<br>Imagem 02 - Query Params Exemplo 2
+<a href="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/Aula%202%20-%2024-03-2020/01%20-%20Query%20Params%20Exemplo%201.png?raw=true">**Imagem 01:** Query Params Exemplo 1</a>
+<br><a href="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/Aula%202%20-%2024-03-2020/02%20-%20Query%20Params%20Exemplo%202.png?raw=true">**Imagem 02:** Query Params Exemplo 2</a>
 
 **Route Params:** Parametros utilizados para identificar recursos.
 <br>Exemplo buscar pelo id: GET http://localhost:3333/users/1
 
-Imagem 03 - Route Params Exemplo 1
-<br>Imagem 04 - Route Params Exemplo 2
+<a href="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/Aula%202%20-%2024-03-2020/03%20-%20Route%20Params%20Exemplo%201.png?raw=true">**Imagem 03:** Route Params Exemplo 1</a>
+<br><a href="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/Aula%202%20-%2024-03-2020/04%20-%20Route%20Params%20Exemplo%202.png?raw=true">**Imagem 04:** Route Params Exemplo 2</a>
 
 **Request Body:** Corpo da requisição, utilizado para criar ou alterar recursos.
 <br>Exemplo: POST http://localhost:3333/users
 
-Imagem 05 - Request Body 1
-<br>Imagem 06 - Request Body 2
+<a href="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/Aula%202%20-%2024-03-2020/05%20-%20Request%20Body%201.png?raw=true">**Imagem 05:** Request Body 1</a>
+<br><a href="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/Aula%202%20-%2024-03-2020/06%20-%20Request%20Body%202.png?raw=true">**Imagem 06:** Request Body 2</a>
 
 ---
 
@@ -279,7 +279,8 @@ app.listen(3333);
 
 ## **Desenvolvimento do Front-end**
 
-<br>Limpando estrutura inicial: contém imagem de como ficou a estrutura
+<br>Limpando estrutura inicial: contém <a href="https://github.com/leonardojcmay/semanaomnistack11.0/blob/master/imagens/Aula%203%20-%2025-03-2020/01%20-%20Limpando%20estrutura.png?raw=true">*imagem*</a>  de como ficou a estrutura. 
+
 
 **Iniciando aplicação:**
 ```
